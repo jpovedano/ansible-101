@@ -14,10 +14,13 @@
 
 ## Examples
 
+### Check that all hosts are accesible
 
 ```console
 ansible-playbook -i inventories/inventory.yaml check.yaml
 ```
+
+### Setup a web server
 
 
 ```console

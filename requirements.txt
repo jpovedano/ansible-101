@@ -9,3 +9,4 @@ packaging==23.1
 pycparser==2.21
 PyYAML==6.0
 resolvelib==0.8.1
+pywinrm

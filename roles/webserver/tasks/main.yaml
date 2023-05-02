@@ -1,5 +1,19 @@
-- name: install software
+- name: install nginx
   ansible.builtin.package:
     name: nginx
     state: present
+  become: true
+
+- name: Enable service
+  ansible.builtin.service:
+    name: nginx
+    state: restarted
+    enabled: true
+  become: true
+
+- name: Change index page
+  ansible.builtin.copy:
+    src: index.html
+    dest: /var/www/html/index.html
+    mode: 0755
   become: true

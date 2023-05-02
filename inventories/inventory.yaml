@@ -7,7 +7,11 @@ all:
       hosts:
         win10-dev:
       vars:
-
+        ansible_connection: 'winrm'
+        ansible_user: test
+        ansible_ssh_pass: test
+        ansible_port: 5985
+        ansible_winrm_transport: 'basic'
     linux:
       hosts:
         ubuntu22-dev:

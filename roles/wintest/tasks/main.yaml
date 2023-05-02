@@ -1,0 +1,11 @@
+# The path is defined in a variable (see roles/wintest/vars/main.yaml)
+- name: Create directory
+  ansible.builtin.win_file:
+    path: '{{ test_dir }}'
+    state: directory
+
+- name: Copy file
+  ansible.builtin.win_lineinfile:
+    path: '{{ test_dir }}\\test.txt'
+    create: true
+    line: Hello Uco

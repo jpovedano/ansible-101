@@ -1,0 +1,17 @@
+all:
+  hosts:
+    win10-dev:
+    ubuntu22-dev:
+  children:
+    windows:
+      hosts:
+        win10-dev:
+      vars:
+
+    linux:
+      hosts:
+        ubuntu22-dev:
+      vars:
+        ansible_user: javier
+        ansible_ssh_pass: javier
+

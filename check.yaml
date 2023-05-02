@@ -1,0 +1,10 @@
+- name: Well, how are the machines? First of all
+  hosts: all
+  tasks:
+    - name: Check Windows hosts
+      ansible.builtin.win_ping:
+      when: ansible_os_family == 'Windows'
+
+    - name: Check Non-Windows hosts
+      ansible.builtin.ping:
+      when: ansible_os_family != 'Windows'

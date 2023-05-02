@@ -1,0 +1,8 @@
+plugin: community.libvirt.libvirt
+uri: 'qemu:///system'
+compose:
+  ansible_shell_type: ('cmd' if guest_info['os.id'] == 'mswindows' else None)
+keyed_groups:
+  - key: "guest_info['os.id']"
+leading_separator: false
+extra_vars: true

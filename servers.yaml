@@ -1,0 +1,4 @@
+- name: Server playbook
+  hosts: ubuntu22-dev
+  roles:
+    - webserver
